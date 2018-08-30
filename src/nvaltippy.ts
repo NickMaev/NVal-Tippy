@@ -25,7 +25,7 @@ export class NValTippy extends NVal {
                 });
             self.tips.push(tip);
             tip.show();
-        },200)
+        }, 200)
     }
 
     protected hideErrors(fields: Field[]) {

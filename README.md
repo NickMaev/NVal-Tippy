@@ -14,7 +14,7 @@ import {NValTippy} from "nval-tippy";
 or use scripts tag:
 ```html
 <script src="nval.min.js"></script>
-<script src="tippy.all.min.js"></script>
+<script src="https://unpkg.com/tippy.js/dist/tippy.all.min.js"></script>
 <script src="nval-tippy.min.js"></script>
 ```
 Then:
