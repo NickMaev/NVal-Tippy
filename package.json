@@ -1,0 +1,46 @@
+{
+  "author": {
+    "name": "Nikolay Maev",
+    "email": "trix.mnr@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/NickMaev/nval-tippy/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Validation with tooltips",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-add-module-exports": "0.3.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "rimraf": "^2.6.2",
+    "ts-loader": "^4.4.2",
+    "typescript": "^3.0.1",
+    "uglify-js": "^3.4.7",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "tippy.js": "^2.5.4",
+    "nval": "^1.0.1"
+  },
+  "homepage": "https://github.com/NickMaev/nval-tippy#readme",
+  "license": "MIT",
+  "main": "dist/nval-tippy.min.js",
+  "name": "nval-tippy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickMaev/nval-tippy.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build:browser",
+    "build:browser": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js --mode production",
+    "clean": "node ./node_modules/rimraf ./dist"
+  },
+  "version": "1.0.0"
+}
