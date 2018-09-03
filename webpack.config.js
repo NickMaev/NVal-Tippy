@@ -13,8 +13,10 @@ module.exports = (env) => {
         },
         output: {
             filename: 'nval-tippy.min.js',
-            library: 'NValTippy'
-            //libraryTarget: 'umd'
+            path: path.join(__dirname, 'dist', 'browser'),
+            library: 'NValTippy',
+            libraryTarget: "umd",
+            globalObject: "typeof self !== 'undefined' ? self : this"
         },
         module: {
 
@@ -24,19 +26,7 @@ module.exports = (env) => {
                     include: /src/,
                     exclude: /node_modules/,
                     use: ['babel-loader', 'ts-loader']
-                },
-                //{
-                //    test: /\.tsx?$/,
-                //    include: /src/,
-                //    exclude: /node_modules/,
-                //    use: [{
-                //        loader: 'babel-loader',
-                //        options: {
-                //            plugins: [require('babel-plugin-add-module-exports')]
-                //        }
-                //    },
-                //        'ts-loader']
-                //},
+                }
             ]
         },
         externals: {
@@ -46,7 +36,8 @@ module.exports = (env) => {
         plugins: [
             new webpack.ProvidePlugin({
                 nval: 'NVal'
-            })
+            }),
+
         ].concat(isDevBuild ? [
             // Plugins that apply in development builds only
             new webpack.SourceMapDevToolPlugin({

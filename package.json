@@ -31,16 +31,22 @@
   },
   "homepage": "https://github.com/NickMaev/nval-tippy#readme",
   "license": "MIT",
-  "main": "dist/nval-tippy.min.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "typings": "./dist/esm/index.d.ts",
+  "umd": "./dist/browser/nval-tippy.min.js",
+  "umd_name": "NVal",
   "name": "nval-tippy",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NickMaev/nval-tippy.git"
   },
   "scripts": {
-    "build": "npm run clean && npm run build:browser",
+    "build:esm": "node ./node_modules/typescript/bin/tsc --project ./tsconfig.json --module es2015 --outDir ./dist/esm -d && node ./process-dts.js",
+    "build:cjs": "node ./node_modules/typescript/bin/tsc --project ./tsconfig.json --module commonjs --outDir ./dist/cjs",
+    "build": "npm run clean && npm run build:browser && npm run build:esm && npm run build:cjs",
     "build:browser": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js --mode production",
     "clean": "node ./node_modules/rimraf ./dist"
   },
-  "version": "1.0.0"
+  "version": "1.0.2"
 }

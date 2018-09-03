@@ -1,6 +1,16 @@
 ﻿import {NVal, ValidationResult, Field } from "nval";
+import tippy from "tippy.js";
 
-declare var tippy: any;
+var Tippy = tippy;
+
+declare var global: any;
+
+//declare var tippy: any;
+if (Tippy == null) {
+    if (global != null) {
+        Tippy = global.tippy;
+    }
+}
 
 export class NValTippy extends NVal {
 
@@ -15,7 +25,7 @@ export class NValTippy extends NVal {
         setTimeout(() => {
             var element = validationResult.elements[0];
             element.setAttribute("title", validationResult.message);
-            var tip = tippy.one(element,
+            var tip = Tippy.one(element,
                 {
                     arrow: true,
                     animation: 'fade',
