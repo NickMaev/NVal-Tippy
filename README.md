@@ -1,3 +1,6 @@
+[![npm version](https://img.shields.io/npm/v/nval-tippy.svg?style=flat-square)](https://www.npmjs.com/package/nval-tippy)
+[![npm downloads](https://img.shields.io/npm/dm/nval-tippy.svg?style=flat-square)](https://www.npmjs.com/package/nval-tippy)
+
 # Description
 NVal-Tippy is a wrapper for [NVal](https://github.com/NickMaev/NVal) and [Tippy.js](https://github.com/atomiks/tippyjs) plugins that allows you to display validation errors in tooltips.
 
