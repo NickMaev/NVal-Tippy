@@ -8,7 +8,11 @@
   },
   "bundleDependencies": false,
   "deprecated": false,
-  "description": "Validation with tooltips",
+  "description": "Validation with tooltips based on Vanilla JS",
+  "dependencies": {
+    "nval": "^1.0.1",
+    "tippy.js": "^2.5.4"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.1",
@@ -48,5 +52,5 @@
     "build:browser": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js --mode production",
     "clean": "node ./node_modules/rimraf ./dist"
   },
-  "version": "1.0.2"
+  "version": "1.0.21"
 }
