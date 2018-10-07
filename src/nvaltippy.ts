@@ -1,5 +1,5 @@
 ﻿import {NVal, ValidationResult, Field } from "nval";
-import tippy from "tippy.js";
+import * as tippy from "tippy.js";
 
 var Tippy = tippy;
 

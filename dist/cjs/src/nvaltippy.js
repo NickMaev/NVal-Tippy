@@ -14,8 +14,8 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var nval_1 = require("nval");
-var tippy_js_1 = require("tippy.js");
-var Tippy = tippy_js_1.default;
+var tippy = require("tippy.js");
+var Tippy = tippy;
 if (Tippy == null) {
     if (global != null) {
         Tippy = global.tippy;
@@ -51,4 +51,4 @@ var NValTippy = (function (_super) {
     return NValTippy;
 }(nval_1.NVal));
 exports.NValTippy = NValTippy;
-//# sourceMappingURL=nvaltippy.js.map
+//# sourceMappingURL=nvalTippy.js.map

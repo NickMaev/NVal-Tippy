@@ -12,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import { NVal } from "nval";
-import tippy from "tippy.js";
+import * as tippy from "tippy.js";
 var Tippy = tippy;
 if (Tippy == null) {
     if (global != null) {
@@ -49,4 +49,4 @@ var NValTippy = (function (_super) {
     return NValTippy;
 }(NVal));
 export { NValTippy };
-//# sourceMappingURL=nvaltippy.js.map
+//# sourceMappingURL=nvalTippy.js.map

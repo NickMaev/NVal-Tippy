@@ -52,5 +52,5 @@
     "build:browser": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js --mode production",
     "clean": "node ./node_modules/rimraf ./dist"
   },
-  "version": "1.0.21"
+  "version": "1.0.26"
 }
