@@ -10,7 +10,7 @@
   "deprecated": false,
   "description": "Validation with tooltips based on Vanilla JS",
   "dependencies": {
-    "nval": "^1.0.1",
+    "nval": "^1.1.0",
     "tippy.js": "^2.5.4"
   },
   "devDependencies": {
@@ -31,7 +31,7 @@
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
     "tippy.js": "^2.5.4",
-    "nval": "^1.0.1"
+    "nval": "^1.1.0"
   },
   "homepage": "https://github.com/NickMaev/nval-tippy#readme",
   "license": "MIT",
@@ -52,5 +52,5 @@
     "build:browser": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js --mode production",
     "clean": "node ./node_modules/rimraf ./dist"
   },
-  "version": "1.0.26"
+  "version": "1.0.27"
 }
