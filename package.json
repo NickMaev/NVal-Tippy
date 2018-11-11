@@ -10,7 +10,7 @@
   "deprecated": false,
   "description": "Validation with tooltips based on Vanilla JS",
   "dependencies": {
-    "nval": "^1.1.1",
+    "nval": "^1.1.2",
     "tippy.js": "^2.5.4"
   },
   "devDependencies": {
@@ -50,5 +50,5 @@
     "build:browser": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js --mode production",
     "clean": "node ./node_modules/rimraf ./dist"
   },
-  "version": "1.0.28"
+  "version": "1.0.29"
 }
