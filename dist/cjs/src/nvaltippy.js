@@ -51,4 +51,4 @@ var NValTippy = (function (_super) {
     return NValTippy;
 }(nval_1.NVal));
 exports.NValTippy = NValTippy;
-//# sourceMappingURL=nvalTippy.js.map
+//# sourceMappingURL=nvaltippy.js.map
