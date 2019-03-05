@@ -1,5 +1,5 @@
-﻿import {NVal, ValidationResult, Field } from "nval";
-import * as tippy from "tippy.js";
+﻿import { NVal, ValidationResult, Field } from "nval";
+import tippy, { Instance } from "tippy.js";
 
 var Tippy = tippy;
 
@@ -21,25 +21,26 @@ export class NValTippy extends NVal {
     }
 
     protected showError(validationResult: ValidationResult): void {
+
         var self = this;
         setTimeout(() => {
             var element = validationResult.elements[0];
             element.setAttribute("title", validationResult.message);
-            var tip = Tippy.one(element,
+            var tip = Tippy(element,
                 {
                     arrow: true,
                     animation: 'fade',
                     hideOnClick: false,
                     interactive: true,
                     sticky: true
-                });
+                }) as any;
             self.tips.push(tip);
-            tip.show();
+            tip.tooltips[0].show();
         }, 200)
     }
 
     protected hideErrors(fields: Field[]) {
-        this.tips.forEach(x => x.destroy());
+        this.tips.forEach(x => x.destroyAll());
         this.tips = [];
     }
 }
