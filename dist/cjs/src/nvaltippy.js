@@ -41,11 +41,23 @@ var NValTippy = (function (_super) {
                 sticky: true
             });
             self.tips.push(tip);
-            tip.tooltips[0].show();
+            if (tip.show) {
+                tip.show();
+            }
+            else {
+                tip.tooltips[0].show();
+            }
         }, 200);
     };
     NValTippy.prototype.hideErrors = function (fields) {
-        this.tips.forEach(function (x) { return x.destroyAll(); });
+        this.tips.forEach(function (x) {
+            if (x.destroy) {
+                x.destroy();
+            }
+            else {
+                x.destroyAll();
+            }
+        });
         this.tips = [];
     };
     return NValTippy;

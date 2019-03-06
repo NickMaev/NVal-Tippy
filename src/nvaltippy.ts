@@ -35,12 +35,22 @@ export class NValTippy extends NVal {
                     sticky: true
                 }) as any;
             self.tips.push(tip);
-            tip.tooltips[0].show();
+            if (tip.show) {
+                tip.show();
+            } else {
+                tip.tooltips[0].show();
+            }
         }, 200)
     }
 
     protected hideErrors(fields: Field[]) {
-        this.tips.forEach(x => x.destroyAll());
+        this.tips.forEach(x => {
+            if (x.destroy) {
+                x.destroy();
+            } else {
+                x.destroyAll();
+            }
+        });
         this.tips = [];
     }
 }
