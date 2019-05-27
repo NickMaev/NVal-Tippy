@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,9 +12,10 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { NVal } from "nval";
-import tippy from "tippy.js";
-var Tippy = tippy;
+Object.defineProperty(exports, "__esModule", { value: true });
+var nval_1 = require("nval");
+var tippy_js_1 = require("tippy.js");
+var Tippy = tippy_js_1.default;
 if (Tippy == null) {
     if (global != null) {
         Tippy = global.tippy;
@@ -59,6 +61,6 @@ var NValTippy = (function (_super) {
         this.tips = [];
     };
     return NValTippy;
-}(NVal));
-export { NValTippy };
-//# sourceMappingURL=nvaltippy.js.map
+}(nval_1.NVal));
+exports.NValTippy = NValTippy;
+//# sourceMappingURL=index.js.map

@@ -1,5 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var nvalTippy_1 = require("./src/nvalTippy");
-exports.NValTippy = nvalTippy_1.NValTippy;
+var index_1 = require("./src/index");
+exports.NValTippy = index_1.NValTippy;
 //# sourceMappingURL=index.js.map

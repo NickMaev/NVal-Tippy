@@ -1,3 +1,3 @@
-export { NValTippy } from "./src/nvalTippy";
+export { NValTippy } from "./src/index";
 
 export as namespace NValTippy;

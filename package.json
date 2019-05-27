@@ -1,4 +1,5 @@
 {
+  "version": "1.0.35",
   "author": {
     "name": "Nikolay Maev",
     "email": "trix.mnr@gmail.com"
@@ -6,9 +7,8 @@
   "bugs": {
     "url": "https://github.com/NickMaev/nval-tippy/issues"
   },
-  "bundleDependencies": false,
   "deprecated": false,
-  "description": "Validation with tooltips based on Vanilla JS",
+  "description": "Validation with tooltips based on NVal and Tippy.js",
   "dependencies": {
     "nval": "1.1.5",
     "tippy.js": "2.5.4"
@@ -42,8 +42,7 @@
     "build:cjs": "node ./node_modules/typescript/bin/tsc --project ./tsconfig.json --module commonjs --outDir ./dist/cjs",
     "build": "npm run clean && npm run build:browser && npm run build:esm && npm run build:cjs",
     "build:browser": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js --mode production",
-    "clean": "node ./node_modules/rimraf ./dist",
+    "clean": "rimraf ./dist",
     "watch": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./webpack.config.js --mode development"
-  },
-  "version": "1.0.34"
+  }
 }
