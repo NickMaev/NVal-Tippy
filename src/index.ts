@@ -1,15 +1,5 @@
 ﻿import { NVal, ValidationResult, Field } from "nval";
-import tippy, { Instance } from "tippy.js";
-
-var Tippy = tippy;
-
-declare var global: any;
-
-if (Tippy == null) {
-    if (global != null) {
-        Tippy = global.tippy;
-    }
-}
+import tippy from "./tippy-shim";
 
 export class NValTippy extends NVal {
 
@@ -36,7 +26,7 @@ export class NValTippy extends NVal {
         setTimeout(() => {
             var element = validationResult.elements[0];
             var opts = { ...self.tippyOptions, content: validationResult.message };
-            var tip = Tippy(element, opts) as any;
+            var tip = tippy(element, opts) as any;
             self.tips.push(tip);
             if (tip.show) {
                 tip.show();

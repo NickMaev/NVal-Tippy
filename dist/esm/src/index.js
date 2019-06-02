@@ -23,13 +23,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { NVal } from "nval";
-import tippy from "tippy.js";
-var Tippy = tippy;
-if (Tippy == null) {
-    if (global != null) {
-        Tippy = global.tippy;
-    }
-}
+import tippy from "./tippy-shim";
 var NValTippy = (function (_super) {
     __extends(NValTippy, _super);
     function NValTippy(htmlFormElement) {
@@ -51,7 +45,7 @@ var NValTippy = (function (_super) {
         setTimeout(function () {
             var element = validationResult.elements[0];
             var opts = __assign({}, self.tippyOptions, { content: validationResult.message });
-            var tip = Tippy(element, opts);
+            var tip = tippy(element, opts);
             self.tips.push(tip);
             if (tip.show) {
                 tip.show();

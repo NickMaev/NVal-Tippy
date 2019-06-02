@@ -14,7 +14,7 @@ npm install nval-tippy
 <script src="https://unpkg.com/nval@1.1.5/dist/browser/nval.min.js"></script>
 <script src="https://unpkg.com/popper.js@1"></script>
 <script src="https://unpkg.com/tippy.js@4"></script>
-<script src="https://unpkg.com/nval-tippy@1.0.36/dist/browser/nval-tippy.min.js"></script>
+<script src="https://unpkg.com/nval-tippy@1.0.38/dist/browser/nval-tippy.min.js"></script>
 ```
 
 # Usage

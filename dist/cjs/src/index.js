@@ -25,13 +25,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var nval_1 = require("nval");
-var tippy_js_1 = require("tippy.js");
-var Tippy = tippy_js_1.default;
-if (Tippy == null) {
-    if (global != null) {
-        Tippy = global.tippy;
-    }
-}
+var tippy_shim_1 = require("./tippy-shim");
 var NValTippy = (function (_super) {
     __extends(NValTippy, _super);
     function NValTippy(htmlFormElement) {
@@ -53,7 +47,7 @@ var NValTippy = (function (_super) {
         setTimeout(function () {
             var element = validationResult.elements[0];
             var opts = __assign({}, self.tippyOptions, { content: validationResult.message });
-            var tip = Tippy(element, opts);
+            var tip = tippy_shim_1.default(element, opts);
             self.tips.push(tip);
             if (tip.show) {
                 tip.show();
