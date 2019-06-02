@@ -8,5 +8,5 @@
 		if(nval.isValid()){
 			alert("Form is valid.")
 		}
-	});
+    });
 }

@@ -12,6 +12,17 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var nval_1 = require("nval");
 var tippy_js_1 = require("tippy.js");
@@ -26,20 +37,23 @@ var NValTippy = (function (_super) {
     function NValTippy(htmlFormElement) {
         var _this = _super.call(this, htmlFormElement) || this;
         _this.tips = [];
+        _this.tippyOptions =
+            {
+                arrow: true,
+                animation: 'fade',
+                hideOnClick: false,
+                showOnInit: true,
+                interactive: true,
+                sticky: true
+            };
         return _this;
     }
     NValTippy.prototype.showError = function (validationResult) {
         var self = this;
         setTimeout(function () {
             var element = validationResult.elements[0];
-            element.setAttribute("title", validationResult.message);
-            var tip = Tippy(element, {
-                arrow: true,
-                animation: 'fade',
-                hideOnClick: false,
-                interactive: true,
-                sticky: true
-            });
+            var opts = __assign({}, self.tippyOptions, { content: validationResult.message });
+            var tip = Tippy(element, opts);
             self.tips.push(tip);
             if (tip.show) {
                 tip.show();

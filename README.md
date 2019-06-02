@@ -2,36 +2,52 @@
 [![npm downloads](https://img.shields.io/npm/dm/nval-tippy.svg?style=flat-square)](https://www.npmjs.com/package/nval-tippy)
 
 # Description
-NVal-Tippy is a wrapper for [NVal](https://github.com/NickMaev/NVal) and [Tippy.js](https://github.com/atomiks/tippyjs) plugins that allows you to display validation errors in tooltips.
+**NVal-Tippy** is a wrapper for [NVal](https://github.com/NickMaev/NVal) and [Tippy.js](https://github.com/atomiks/tippyjs) plugins that allows you to display validation errors in tooltips.
+
+# Installation
+#### NPM
+```console
+npm install nval-tippy
+```
+#### CDN
+```html
+<script src="https://unpkg.com/nval@1.1.5/dist/browser/nval.min.js"></script>
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@4"></script>
+<script src="https://unpkg.com/nval-tippy@1.0.36/dist/browser/nval-tippy.min.js"></script>
+```
 
 # Usage
 
-## Install
-`npm install nval tippy.js nval-tippy`
+## Declare
 
-## Prepare
-Import:
+#### NPM version
+###### Import:
 ```typescript
-import {NValTippy} from "nval-tippy";
+import { NValTippy } from "nval-tippy";
 ```
-or use scripts tag:
-```html
-<script src="nval.min.js"></script>
-<script src="https://unpkg.com/tippy.js/dist/tippy.all.min.js"></script>
-<script src="nval-tippy.min.js"></script>
-```
-Then:
-(TypeScript)
+###### Then:
 ```typescript
-var nval = new NValTippy(document.getElementById("myForm"));
+// Pass the form element as an argument.
+var validator = new NValTippy(document.getElementById("myForm"));
 ```
-(JavaScript, using scripts tag)
+
+---------------
+
+#### CDN version
 ```javascript
-var nval = new NValTippy.NValTippy(document.getElementById("myForm"));
+// Pass the form element as an argument.
+var validator = new NValTippy.NValTippy(document.getElementById("myForm"));
 ```
 
-## Run check
-
+## Run
 ```typescript
-nval.isValid() // Returns boolean.
+validator.isValid(); // Returns boolean.
 ```
+
+# Configuration
+## Validation
+NValTippy object extends [NVal](https://github.com/NickMaev/NVal). To configure validation use the official documentation for it.
+## Tooltips
+Tooltip options are available by the public property `tippyOptions`.
+To configure tooltips use the official documentation for [Tippy.js](https://github.com/atomiks/tippyjs).

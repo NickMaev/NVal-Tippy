@@ -1,42 +1,55 @@
 {
-  "version": "1.0.35",
-  "author": {
-    "name": "Nikolay Maev",
-    "email": "trix.mnr@gmail.com"
+  "name": "nval-tippy",
+  "description": "Validation with tooltips based on NVal and Tippy.js",
+  "version": "1.0.36",
+  "license": "MIT",
+  "homepage": "https://github.com/NickMaev/nval-tippy#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickMaev/nval-tippy.git"
   },
   "bugs": {
     "url": "https://github.com/NickMaev/nval-tippy/issues"
   },
+  "author": {
+    "name": "Nikolay Maev",
+    "email": "trix.mnr@gmail.com"
+  },
   "deprecated": false,
-  "description": "Validation with tooltips based on NVal and Tippy.js",
+  "keywords": [
+    "nval-tippy",
+    "nvaltippy",
+    "nval",
+    "tippy",
+    "tippyjs",
+    "validator",
+    "validation",
+    "tooltip",
+    "tooltips",
+    "jquery-validation",
+    "jquery-validator"
+  ],
   "dependencies": {
     "nval": "1.1.5",
-    "tippy.js": "2.5.4"
+    "tippy.js": "4.3.1"
   },
   "devDependencies": {
-    "@babel/core": "7.3.3",
-    "webpack-dev-server": "3.2.1",
+    "@babel/core": "7.4.5",
+    "webpack-dev-server": "3.5.1",
     "rimraf": "2.6.3",
-    "uglify-js": "^3.4.7",
-    "babel-plugin-add-module-exports": "1.0.0",
-    "babel-loader": "8.0.5",
-    "webpack": "4.29.6",
-    "webpack-cli": "3.2.3",
-    "ts-loader": "5.3.3",
-    "typescript": "3.3.3333"
+    "uglify-js": "3.6.0",
+    "babel-plugin-add-module-exports": "1.0.2",
+    "babel-loader": "8.0.6",
+    "webpack": "4.32.2",
+    "webpack-cli": "3.3.2",
+    "ts-loader": "6.0.2",
+    "typescript": "3.5.1"
   },
-  "homepage": "https://github.com/NickMaev/nval-tippy#readme",
-  "license": "MIT",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "typings": "./dist/esm/index.d.ts",
   "umd": "./dist/browser/nval-tippy.min.js",
   "umd_name": "NVal",
-  "name": "nval-tippy",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NickMaev/nval-tippy.git"
-  },
   "scripts": {
     "build:esm": "node ./node_modules/typescript/bin/tsc --project ./tsconfig.json --module es2015 --outDir ./dist/esm -d && node ./process-dts.js",
     "build:cjs": "node ./node_modules/typescript/bin/tsc --project ./tsconfig.json --module commonjs --outDir ./dist/cjs",
