@@ -27,11 +27,13 @@ export class NValTippy extends NVal {
             var element = validationResult.elements[0];
             var opts = { ...self.tippyOptions, content: validationResult.message };
             var tip = tippy(element, opts) as any;
-            self.tips.push(tip);
-            if (tip.show) {
-                tip.show();
-            } else {
-                tip.tooltips[0].show();
+            if (tip) {
+                self.tips.push(tip);
+                if (tip.show) {
+                    tip.show();
+                } else {
+                    tip.tooltips[0].show();
+                }
             }
         }, 200);
     }

@@ -48,12 +48,14 @@ var NValTippy = (function (_super) {
             var element = validationResult.elements[0];
             var opts = __assign({}, self.tippyOptions, { content: validationResult.message });
             var tip = tippy_shim_1.default(element, opts);
-            self.tips.push(tip);
-            if (tip.show) {
-                tip.show();
-            }
-            else {
-                tip.tooltips[0].show();
+            if (tip) {
+                self.tips.push(tip);
+                if (tip.show) {
+                    tip.show();
+                }
+                else {
+                    tip.tooltips[0].show();
+                }
             }
         }, 200);
     };
