@@ -1,7 +1,7 @@
 {
   "name": "nval-tippy",
   "description": "Validation with tooltips based on NVal and Tippy.js",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "license": "MIT",
   "homepage": "https://github.com/NickMaev/nval-tippy#readme",
   "repository": {

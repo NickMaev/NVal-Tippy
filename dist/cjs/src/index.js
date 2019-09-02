@@ -59,11 +59,13 @@ var NValTippy = (function (_super) {
     };
     NValTippy.prototype.hideErrors = function (fields) {
         this.tips.forEach(function (x) {
-            if (x.destroy) {
-                x.destroy();
-            }
-            else {
-                x.destroyAll();
+            if (x) {
+                if (x.destroy) {
+                    x.destroy();
+                }
+                else {
+                    x.destroyAll();
+                }
             }
         });
         this.tips = [];

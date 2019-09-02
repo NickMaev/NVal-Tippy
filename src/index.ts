@@ -38,10 +38,12 @@ export class NValTippy extends NVal {
 
     protected hideErrors(fields: Field[]) {
         this.tips.forEach(x => {
-            if (x.destroy) {
-                x.destroy();
-            } else {
-                x.destroyAll();
+            if (x) {
+                if (x.destroy) {
+                    x.destroy();
+                } else {
+                    x.destroyAll();
+                }
             }
         });
         this.tips = [];
